@@ -2,6 +2,13 @@ language: node_js
 node_js: node
 cache:
   directories:
-    - node_modules
+  - node_modules
 env:
-  - CI=true
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: seEEiwubL9iVBLEqs0xVVm9CJ9z0q/fSqu4Jvj1FZ0l/fKkWIChDO0WJIRZCeP8y/JAvnsJHf6HKxZTHqFoAxBUENmAwguaN+9d8vlTbzzRSQEIe3pdKGouvKldp0zzpLhNZSwDl/V+0horU3dnnx54xUaIx/lcUzalNsTkC/UTlRsTT/azz9xUdtMk4etftOtDZ4Z8N28dacsCv9EPLNUVCRxts8+OFoLuu6lXeCV28SWHZx0aMRPAXfj+VA8KH6LHs9ex9D/3aJlYXe7Uu8LvLylbD8u1mnaLDzQtPQcLI9RwIFmUwIq90xJwmEcZNlWF5wKy5G1MtDnB4dFhMvBYDHOPgFmTbjjH2SFvJeULxXYsFv8/W0xAM4Ui3FV8dmrcolzZhAtUXWYpTA9PW2uQPzVdBae6+R+A+5A6VTBLu4WHDURlLFq1sGAJcxtUNzL6tUsHIdmZEYR7wBoBLWYnxVrfaOkTkz/qjNLGN9URawk2JE4JWYZT1X6aAEHRzBoJCvpyZ2m1i/Wrraw0BtM7mPdPNF+6vWc9Twcjs4YNndjOx8mV0b2qkMp4VpBbLPZTZEG9R8r94YxuTpaljI9lvR0shhYNl5ropwltjxIKCxbnJ7YDxdJ/51YCTOvdJmmlCMW7bRbqLdYE1ViraepgO2Ef3h9SciIY4FQJsqEE=
+  app: hotandcold
+  on:
+    repo: tcw5038/hotandcold

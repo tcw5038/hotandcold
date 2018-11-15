@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ShowGuess(props) {
+export default function ShowHint(props) {
     return (
         <div>
             <h2>

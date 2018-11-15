@@ -1,6 +1,8 @@
 import React from 'react';
 import GuessButton from './guess-button';
-import ShowGuess from './show-guess';
+import ShowHint from './show-hint';
+import CurrentGuess from './current-guess';
+
 
 export default class GuessForm extends React.Component {
     constructor(props){
@@ -22,9 +24,8 @@ export default class GuessForm extends React.Component {
         });
         this.CheckGuess(guess);
     }
-    //let resultHint;
+
     CheckGuess(guess){
-        //guess = this.state.currentGuess;
         console.log(guess);
         let difference = Math.abs(guess-this.state.num); //absolute value guarantees a positive number in this case
         let resultHint;
@@ -52,16 +53,13 @@ export default class GuessForm extends React.Component {
             <form onSubmit={event => this.setNewGuess(event)}>
                 <input type="number" min={1} max={100} ref={input => this.textInput = input}/>
                 <GuessButton/>
-                <ShowGuess value={this.state.resultHint} />
-                <h2>{this.state.currentGuess}</h2>
-                 
+                <ShowHint value={this.state.resultHint} />
+                <CurrentGuess value={this.state.currentGuess} />
             </form>
-
         );
-
     }
     
 
-   
+   //
 
 }//end of component

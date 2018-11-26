@@ -54,19 +54,8 @@ export default class MainGame extends React.Component{
             currentGuess:guess,
             guessHistory:[...this.state.guessHistory, guess]//updates the guessHistory with the new guess
         });
-
-        //this.updateGuessHistory(guess);//calls updateGuessHistory and passes in the current guess so that it can be added to the state
     }
 
-    /*updateGuessHistory(guess){
-        //we need to record a history of guesses and then make sure we can output them in GuessHistory
-        let currentGuessHistory = this.state.guessHistory;
-        currentGuessHistory.push(guess);
-        this.setState({
-            guessHistory:currentGuessHistory
-        });
-        console.log(this.state.guessHistory);
-    }*/
 
 
 render(){
@@ -80,4 +69,4 @@ render(){
         
     )
 }
-}//end of class MainGame
+}

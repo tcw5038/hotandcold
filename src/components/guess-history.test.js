@@ -6,4 +6,5 @@ describe('<GuessHistory />', () => {
     it('Renders without crashing', () => {
       shallow(<GuessHistory />);
     });
+
 });
